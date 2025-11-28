@@ -1,3 +1,5 @@
+import PokemonCard from "./PokemonCard"
+
 export default function PokemonContainer(){
     
     const [pokemons, setPokemons] = useState([
@@ -8,12 +10,13 @@ export default function PokemonContainer(){
     ])
     
     
+    
     return(
         <div>
             {
             pokemons.map((pokemonCorrenteDoFor)=>{
                 return(
-                    <label>{pokemonCorrenteDoFor}</label>
+                    <PokemonCard nome={pokemonCorrenteDoFor}/>
                 )
             })
         }
